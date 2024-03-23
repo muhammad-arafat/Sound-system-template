@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import sectionImage from "../assets/images/section_image.jpg";
+import sectionImage from "../assets/images/section_image1.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { TbLoaderQuarter } from "react-icons/tb";
@@ -9,7 +9,7 @@ const Subscription = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init();
   });
 
   const handleSubmit = async e => {
@@ -18,23 +18,25 @@ const Subscription = () => {
   };
 
   return (
-    <div className='max-w-7xl mx-auto px-5'>
+    <div className='max-w-7xl mx-auto px-5 pt-10 md:py-24'>
       <div className='w-full relative flex items-center justify-center'>
         <img
           src={sectionImage}
           alt='dining'
-          className='w-full h-full absolute z-0 flex'
+          className='w-full h-full absolute z-0 flex opacity-40'
         />
         <div
-          data-aos='fade-up-left'
-          className='bg-gray-800 bg-opacity-80 md:my-16 lg:py-16 py-10 w-full md:mx-24 md:px-12 px-4 flex flex-col items-center justify-center relative z-40'
+          data-aos='fade-up'
+          data-aos-duration='1000'
+          className='bg-gray-600 bg-opacity-80 md:my-16 lg:py-16 py-10 w-full md:mx-24 md:px-12 px-4 flex flex-col items-center justify-center relative z-40'
         >
           <h1 className='text-3xl md:text-5xl font-bold leading-9 text-white text-center'>
             Stay
-            <span className='text-red-500'> Ahead of Anyone!</span>
+            <span className='text-red-500'> Updated with Us!</span>
           </h1>
           <p className='text-xl leading-normal text-center text-white/65 mt-6'>
-            Subscribe. Know the latest trends, music newses, industry insights.
+            Subscribe. Know the latest trends, music instruments,music industry
+            insights.
           </p>
 
           <form

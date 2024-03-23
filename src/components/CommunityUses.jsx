@@ -4,12 +4,28 @@ import edu from "../assets/images/icon-edu.png";
 import hos from "../assets/images/icon-hos.png";
 import res1 from "../assets/images/res.jpg";
 import hotel1 from "../assets/images/hotel.jpg";
-
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const CommunityUses = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <>
-      <h2 className=' text-center uppercase text-2xl md:text-4xl'>Community</h2>
-      <div className='px-5 flex flex-col lg:flex-row-reverse mx-auto max-w-7xl my-10 lg:my-20'>
+      <h2
+        data-aos='fade-down-right'
+        data-aos-duration='1000'
+        className=' text-center uppercase text-2xl md:text-4xl pt-10 md:mt-24'
+      >
+        Community use cases
+      </h2>
+      <div
+        data-aos='fade-down-left'
+        data-aos-duration='1000'
+        className='px-5 flex flex-col lg:flex-row-reverse mx-auto max-w-7xl my-10 lg:my-24'
+      >
         <div className=''>
           <img src={res1} alt='' />
           <img src={hotel1} alt='' />

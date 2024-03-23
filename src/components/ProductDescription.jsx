@@ -17,9 +17,9 @@ const ProductDescription = () => {
   };
 
   return (
-    <div className='max-w-7xl mx-auto px-5 flex gap-y-8 md:gap-y-0 md:gap-x-10 flex-col md:flex-row items-center justify-between'>
+    <div className='max-w-7xl mx-auto px-5 flex gap-y-8 md:gap-y-0 md:gap-x-10 flex-col md:flex-row items-center justify-between mt-10 md:mt-20 '>
       <motion.div
-        className='w-full space-y-5'
+        className='w-full space-y-5 '
         variants={textVariants}
         initial='hidden'
         animate='visible'
@@ -30,7 +30,10 @@ const ProductDescription = () => {
         >
           Easy Acoustic System
         </motion.h1>
-        <motion.div className='text-lg' variants={textVariants}>
+        <motion.div
+          className='text-lg text-gray-400 font-medium'
+          variants={textVariants}
+        >
           We fulfill the acoustic environment creatively, complying to strict
           acoustic standards, practice advance manufacturing technique for all
           of our product design. Our products are applicable to AV room, music
@@ -41,24 +44,27 @@ const ProductDescription = () => {
           to the pickiest ears.
         </motion.div>
         <motion.h3
-          className='text-2xl md:text-3xl font-bold mb-2'
+          className='text-2xl md:text-3xl font-bold mb-2 text-red-500'
           variants={textVariants}
         >
           Soundbox
         </motion.h3>
-        <motion.p className='text-lg' variants={textVariants}>
+        <motion.p
+          className='text-lg text-gray-400 font-medium'
+          variants={textVariants}
+        >
           As a leading company in the acoustic field, we can meet your high-end
           requirements.
         </motion.p>
       </motion.div>
       <motion.div
-        className='grid grid-cols-2 w-full items-center justify-center gap-2'
+        className='grid grid-cols-2 w-full items-center justify-center gap-2 text-gray-400 font-medium'
         variants={textVariants}
         initial='hidden'
         animate='visible'
       >
         <motion.div
-          className='space-y-2'
+          className='space-y-2 border p-4 rounded-2xl'
           variants={textVariants}
           whileHover='hover'
         >
@@ -74,7 +80,7 @@ const ProductDescription = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className='space-y-2'
+          className='space-y-2 border p-4 rounded-2xl'
           variants={textVariants}
           whileHover='hover'
         >
@@ -90,7 +96,7 @@ const ProductDescription = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className='space-y-2'
+          className='space-y-2 border p-4 rounded-2xl'
           variants={textVariants}
           whileHover='hover'
         >
@@ -106,7 +112,7 @@ const ProductDescription = () => {
           </motion.p>
         </motion.div>
         <motion.div
-          className='space-y-2'
+          className='space-y-2 border p-4 rounded-2xl'
           variants={textVariants}
           whileHover='hover'
         >

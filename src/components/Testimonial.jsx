@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import "./pagination.css";
 import { FaRegCommentDots } from "react-icons/fa";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -13,7 +12,7 @@ const Testimonials = () => {
   const [testimonial, setTestimonial] = useState([]);
 
   useEffect(() => {
-    Aos.init({ duration: 3000 });
+    Aos.init();
     const fetchReview = async () => {
       try {
         const response = await fetch("/testimonials.json");
@@ -28,10 +27,10 @@ const Testimonials = () => {
 
   return (
     <>
-      <h2 className='my-10 md:my-20 text-center uppercase text-2xl md:text-4xl'>
+      <h2 className='pt-10 md:mt-20 text-center uppercase text-2xl md:text-4xl'>
         Users Feedback
       </h2>
-      <div className=' max-w-7xl mx-auto px-4 my-10 md:my-20'>
+      <div className='max-w-7xl mx-auto px-4 my-10 md:my-20'>
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
@@ -47,11 +46,12 @@ const Testimonials = () => {
             },
           }}
         >
-          {testimonial.map(review => (
-            <SwiperSlide key={review.name}>
+          {testimonial.map((review, index) => (
+            <SwiperSlide key={index}>
               <div
-                data-aos='flip-up'
-                className='w-full  h-[420px] shadow-lg rounded-2xl overflow-hidden animate-gradient-x'
+                data-aos='fade-down'
+                data-aos-duration='1000'
+                className='w-full h-[420px] overflow-hidden'
               >
                 <div className='-mb-14'>
                   <img
@@ -61,7 +61,7 @@ const Testimonials = () => {
                   />
                 </div>
 
-                <div className='p-6 flex flex-col items-center space-y-5 justify-center h-[350px] rounded-2xl border hover:shadow-md'>
+                <div className='p-6 flex flex-col items-center space-y-5 justify-center h-[350px] rounded-2xl border'>
                   <div className='text-center'>
                     <FaRegCommentDots className='text-4xl text-blue-500' />
                   </div>
@@ -70,7 +70,7 @@ const Testimonials = () => {
                     {review.name}
                   </h3>
 
-                  <p className='text-lg md:text-xl text-center w-full text-gray-700 '>
+                  <p className='text-lg md:text-xl text-center w-full text-gray-700'>
                     {review.message}
                   </p>
                 </div>

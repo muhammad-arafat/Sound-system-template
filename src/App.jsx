@@ -20,7 +20,7 @@ function App() {
       <div>
         <ProductDescription />
       </div>
-      <div>
+      <div className=' mt-10 md:mt-26'>
         <Products />
       </div>
       <div>
