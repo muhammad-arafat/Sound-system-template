@@ -13,46 +13,24 @@ import Testimonial from "./components/Testimonial";
 
 function App() {
   return (
-    <>
-      <div>
-        <Banner />
-      </div>
-      <div>
-        <ProductDescription />
-      </div>
+    <div>
+      <Banner />
+      <ProductDescription />
       <div className=' mt-10 md:mt-26'>
         <Products />
       </div>
-      <div>
-        <PublicUses />
-      </div>
-      <div>
-        <CommunityUses />
-      </div>
-      <div>
-        <Commercial />
-      </div>
-
-      <div>
-        <ProductTab />
-      </div>
+      <PublicUses />
+      <CommunityUses />
+      <Commercial />
+      <ProductTab />
       <div className=' my-10 md:my-20'>
         <ProductCarousal />
       </div>
-      <div>
-        <Awards />
-      </div>
-      <div>
-        <Testimonial />
-      </div>
-      <div>
-        <Subscription />
-      </div>
-
-      <div>
-        <Footer />
-      </div>
-    </>
+      <Awards />
+      <Testimonial />
+      <Subscription />
+      <Footer />
+    </div>
   );
 }
 

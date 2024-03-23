@@ -13,57 +13,61 @@ const Awards = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className='max-w-7xl mx-auto px-5 py-32'>
       <h2
-        className='text-center uppercase text-2xl md:text-4xl pt-10 md:pt-24'
         data-aos='fade-up'
+        className='uppercase text-2xl md:text-5xl font-semibold'
       >
         Awards and Certificates
       </h2>
-      <div className='w-full max-w-7xl mx-auto flex flex-wrap md:flex-nowrap justify-center items-center mt-10 '>
-        <div data-aos='fade-up' data-aos-duration='1000' className='m-4'>
-          <img
-            className=' w-3/4 md:w-full mx-auto'
-            src={award1}
-            alt='Award 1'
-          />
-          <p className='text-center mt-2 text-xl lg:text-2xl'>SGS Standard</p>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className='w-full flex gap-x-5 flex-wrap md:flex-nowrap justify-center items-center '>
+          <div data-aos='fade-up' data-aos-duration='1000' className='m-4'>
+            <img
+              className=' w-3/4 md:w-full mx-auto'
+              src={award1}
+              alt='Award 1'
+            />
+            <p className='text-center mt-2 text-xl lg:text-2xl'>SGS Standard</p>
+          </div>
+          <div data-aos='fade-up' data-aos-duration='1000' className='m-4'>
+            <img
+              className=' w-3/4 md:w-full mx-auto'
+              src={award2}
+              alt='Award 2'
+            />
+            <p className='text-center mt-2 text-xl lg:text-2xl'>
+              ISO9001: 2015
+            </p>
+          </div>
+          <div data-aos='fade-up' data-aos-duration='1000' className='m-4'>
+            <img
+              className=' w-3/4 md:w-full mx-auto'
+              src={award3}
+              alt='Award 3'
+            />
+            <p className='text-center mt-2 text-xl lg:text-2xl'>
+              High Technology Expertise
+            </p>
+          </div>
+          <div data-aos='fade-up' data-aos-duration='1000' className='m-4'>
+            <img
+              className=' w-3/4 md:w-full mx-auto'
+              src={award4}
+              alt='Award 4'
+            />
+            <p className='text-center mt-2 text-xl lg:text-2xl'>
+              Insert Award 4 Text Here
+            </p>
+          </div>
         </div>
-        <div data-aos='fade-up' data-aos-duration='1000' className='m-4'>
-          <img
-            className=' w-3/4 md:w-full mx-auto'
-            src={award2}
-            alt='Award 2'
-          />
-          <p className='text-center mt-2 text-xl lg:text-2xl'>ISO9001: 2015</p>
-        </div>
-        <div data-aos='fade-up' data-aos-duration='1000' className='m-4'>
-          <img
-            className=' w-3/4 md:w-full mx-auto'
-            src={award3}
-            alt='Award 3'
-          />
-          <p className='text-center mt-2 text-xl lg:text-2xl'>
-            High Technology Expertise
-          </p>
-        </div>
-        <div data-aos='fade-up' data-aos-duration='1000' className='m-4'>
-          <img
-            className=' w-3/4 md:w-full mx-auto'
-            src={award4}
-            alt='Award 4'
-          />
-          <p className='text-center mt-2 text-xl lg:text-2xl'>
-            Insert Award 4 Text Here
-          </p>
-        </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

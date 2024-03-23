@@ -27,10 +27,10 @@ const Testimonials = () => {
 
   return (
     <>
-      <h2 className='pt-10 md:mt-20 text-center uppercase text-2xl md:text-4xl'>
-        Users Feedback
-      </h2>
-      <div className='max-w-7xl mx-auto px-4 my-10 md:my-20'>
+      <div className='max-w-7xl mx-auto px-4 py-32'>
+        <h2 className='pb-20 uppercase text-2xl md:text-5xl font-semibold'>
+          Users Feedback
+        </h2>
         <Swiper
           slidesPerView={1}
           spaceBetween={30}

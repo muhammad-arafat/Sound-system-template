@@ -94,18 +94,18 @@ const ProductTab = () => {
 
   return (
     <>
-      <h2
-        className='text-center uppercase text-2xl md:text-4xl pt-10'
-        data-aos='fade-down-right'
-        data-aos-duration='1000'
-      >
-        NEVER MISS A BEAT
-      </h2>
       <div
         className='w-full max-w-7xl mx-auto px-2 py-24 sm:px-0'
         data-aos='fade-up-left'
         data-aos-duration='1000'
       >
+        <h2
+          className='pb-20 uppercase text-2xl md:text-5xl font-semibold'
+          data-aos='fade-down-right'
+          data-aos-duration='1000'
+        >
+          NEVER MISS A BEAT
+        </h2>
         <Tab.Group>
           <Tab.List className='flex space-x-1 rounded-xl bg-red-500 p-1'>
             {Object.keys(categories).map(category => (

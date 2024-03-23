@@ -14,38 +14,40 @@ const PublicUses = () => {
 
   return (
     <>
-      <h2
-        data-aos='fade-right'
-        data-aos-duration='1000'
-        className='text-center uppercase pt-10 text-2xl md:text-4xl '
-      >
-        Public Use Cases
-      </h2>
-      <div
-        data-aos='fade-left'
-        data-aos-duration='1000'
-        className='px-5 flex flex-col lg:flex-row mx-auto max-w-7xl mt-10 lg:mt-24'
-      >
-        <div className=''>
-          <img src={gallery1} alt='' />
-          <img src={gallery2} alt='' />
-        </div>
-        <div className='grid grid-cols-2'>
-          <div className='flex flex-col justify-center items-center py-4'>
-            <img className='w-1/2' src={std} alt='' />
-            <p className='uppercase text-lg md:text-2xl'>Stadium</p>
+      <div className='px-5  max-w-7xl my-32 mx-auto'>
+        <h2
+          data-aos='fade-down-right'
+          data-aos-duration='1000'
+          className='pb-20 uppercase text-2xl md:text-5xl font-semibold'
+        >
+          Public Use Cases
+        </h2>
+        <div
+          data-aos='fade-left'
+          data-aos-duration='1000'
+          className='flex flex-col lg:flex-row mx-auto'
+        >
+          <div className=''>
+            <img src={gallery1} alt='' />
+            <img src={gallery2} alt='' />
           </div>
-          <div className='flex flex-col justify-center items-center py-4 bg-gray-300'>
-            <img className='w-1/2' src={aud} alt='' />
-            <p className='uppercase text-lg md:text-2xl'>Auditorium</p>
-          </div>
-          <div className='flex flex-col justify-center items-center py-4 bg-gray-300'>
-            <img className='w-1/2' src={cine} alt='' />
-            <p className='uppercase text-lg md:text-2xl'>Cinema</p>
-          </div>
-          <div className='flex flex-col justify-center items-center py-4'>
-            <img className='w-1/2' src={wor} alt='' />
-            <p className='uppercase text-lg md:text-2xl'>Worship place</p>
+          <div className='grid grid-cols-2'>
+            <div className='flex flex-col justify-center items-center py-4'>
+              <img className='w-1/2' src={std} alt='' />
+              <p className='uppercase text-lg md:text-2xl'>Stadium</p>
+            </div>
+            <div className='flex flex-col justify-center items-center py-4 bg-gray-300'>
+              <img className='w-1/2' src={aud} alt='' />
+              <p className='uppercase text-lg md:text-2xl'>Auditorium</p>
+            </div>
+            <div className='flex flex-col justify-center items-center py-4 bg-gray-300'>
+              <img className='w-1/2' src={cine} alt='' />
+              <p className='uppercase text-lg md:text-2xl'>Cinema</p>
+            </div>
+            <div className='flex flex-col justify-center items-center py-4'>
+              <img className='w-1/2' src={wor} alt='' />
+              <p className='uppercase text-lg md:text-2xl'>Worship place</p>
+            </div>
           </div>
         </div>
       </div>
