@@ -1,17 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import earbud from "../assets/images/earbud.png";
-import headphone from "../assets/images/headphone.png";
+import new_box from "../assets/images/new.png";
+import modern from "../assets/images/modern.png";
 import box from "../assets/images/product-box.png";
 
 const productsData = [
-  {
-    image: earbud,
-    title: "Best Sound Experience!",
-    subtitle:
-      "Unlock Premium Acoustic Solutions Today & Get a Free Consultation!",
-    buttonText: "Let's Start",
-  },
   {
     image: box,
     title: "Transform Your Acoustic Landscape!",
@@ -19,7 +12,14 @@ const productsData = [
     buttonText: "Get Started",
   },
   {
-    image: headphone,
+    image: new_box,
+    title: "Best Sound Experience!",
+    subtitle:
+      "Unlock Premium Acoustic Solutions Today & Get a Free Consultation!",
+    buttonText: "Let's Explore",
+  },
+  {
+    image: modern,
     title: "Enhance Your Listening Environment!",
     subtitle: "Discover Tailored Acoustic Solutions for Every Space!",
     buttonText: "Explore Now",
@@ -39,18 +39,18 @@ const Product = ({ image, title, subtitle, buttonText }) => {
         <img
           src={image}
           alt='Banner Image'
-          className={`rounded-3xl ${
+          className={`rounded-3xl  ${
             isHovered
               ? "scale-105 transition-transform duration-500 ease-in-out"
               : "scale-100"
           }`}
         />
         {isHovered && (
-          <div className='absolute inset-0 flex flex-col items-center justify-center text-center bg-black bg-opacity-75 transition-opacity duration-500 ease-in-out'>
+          <div className='absolute inset-0 flex flex-col items-center text-start justify-center px-3 bg-black bg-opacity-75 transition-opacity duration-500 ease-in-out'>
             <h2 className='text-2xl font-bold text-white mb-2'>{title}</h2>
             <p className='text-lg text-white mb-4'>{subtitle}</p>
-            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-              {buttonText}
+            <button className='bg-blue-500 hover:bg-blue-700 text-white flex justify-center w-full  font-bold py-2 px-4 rounded'>
+              {buttonText}!
             </button>
           </div>
         )}
@@ -61,8 +61,8 @@ const Product = ({ image, title, subtitle, buttonText }) => {
 
 const Products = () => {
   return (
-    <div className='min-h-screen lg:min-h-[80vh] flex justify-center items-center bg-product bg-no-repeat bg-cover bg-fixed w-full bg-center my-10 lg:my-20'>
-      <div className='w-full py-28 lg:py-0 flex flex-col lg:flex-row lg:gap-x-10 justify-around items-center'>
+    <div className='min-h-screen flex justify-center items-center bg-product bg-no-repeat bg-cover bg-fixed w-full bg-center my-10 lg:my-20'>
+      <div className='max-w-7xl mx-auto py-28 lg:py-0 flex flex-col lg:flex-row  justify-around items-center'>
         {productsData.map((banner, index) => (
           <div key={index} className='flex  items-center justify-center w-full'>
             <Product

@@ -2,7 +2,7 @@ import bannerImage from "../assets/images/banner.jpg";
 
 const Banner = () => {
   return (
-    <div className=' max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between my-10  px-5 font-poppins '>
+    <div className=' max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between my-10 lg:mb-20  px-5 font-poppins'>
       <div className='text-center md:text-left space-y-3 md:space-y-5 flex-1'>
         <h1 className='text-2xl md:text-4xl font-bold mb-2'>
           Elevate Your Sound Experience!
