@@ -27,7 +27,7 @@ const Testimonials = () => {
 
   return (
     <>
-      <div className='max-w-7xl mx-auto px-4 py-32'>
+      <div className='max-w-7xl mx-auto px-4 pt-20'>
         <h2 className='pb-20 uppercase text-2xl md:text-5xl font-semibold'>
           Users Feedback
         </h2>

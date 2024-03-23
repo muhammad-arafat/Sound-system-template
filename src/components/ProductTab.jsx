@@ -95,7 +95,7 @@ const ProductTab = () => {
   return (
     <>
       <div
-        className='w-full max-w-7xl mx-auto px-2 py-24 sm:px-0'
+        className='w-full max-w-7xl mx-auto px-2 pt-24 sm:px-0'
         data-aos='fade-up-left'
         data-aos-duration='1000'
       >

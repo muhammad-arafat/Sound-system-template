@@ -25,7 +25,7 @@ const CommunityUses = () => {
         <div
           data-aos='fade-down-left'
           data-aos-duration='1000'
-          className='flex flex-col lg:flex-row-reverse my-32'
+          className='flex flex-col lg:flex-row-reverse'
         >
           <div className=''>
             <img src={res1} alt='' />
