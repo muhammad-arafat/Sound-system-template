@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import sectionImage from "../assets/images/section_image.jpg";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { TbLoaderQuarter } from "react-icons/tb";
 
 const Subscription = () => {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  });
 
   const handleSubmit = async e => {
     setLoading(true);
@@ -20,7 +25,10 @@ const Subscription = () => {
           alt='dining'
           className='w-full h-full absolute z-0 flex'
         />
-        <div className='bg-gray-800 bg-opacity-80 md:my-16 lg:py-16 py-10 w-full md:mx-24 md:px-12 px-4 flex flex-col items-center justify-center relative z-40'>
+        <div
+          data-aos='fade-up-left'
+          className='bg-gray-800 bg-opacity-80 md:my-16 lg:py-16 py-10 w-full md:mx-24 md:px-12 px-4 flex flex-col items-center justify-center relative z-40'
+        >
           <h1 className='text-3xl md:text-5xl font-bold leading-9 text-white text-center'>
             Stay
             <span className='text-red-500'> Ahead of Anyone!</span>

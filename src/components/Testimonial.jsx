@@ -6,11 +6,14 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "./pagination.css";
 import { FaRegCommentDots } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Testimonials = () => {
   const [testimonial, setTestimonial] = useState([]);
 
   useEffect(() => {
+    Aos.init({ duration: 3000 });
     const fetchReview = async () => {
       try {
         const response = await fetch("/testimonials.json");
@@ -46,7 +49,10 @@ const Testimonials = () => {
         >
           {testimonial.map(review => (
             <SwiperSlide key={review.name}>
-              <div className='w-full h-[420px] shadow-lg rounded-2xl overflow-hidden bg-gradient-to-r from-blue-600 via-red-400 to-gray-500 animate-gradient-x'>
+              <div
+                data-aos='flip-up'
+                className='w-full  h-[420px] shadow-lg rounded-2xl overflow-hidden animate-gradient-x'
+              >
                 <div className='-mb-14'>
                   <img
                     className='rounded-tr-3xl w-24 h-[82px] object-cover'
@@ -59,13 +65,12 @@ const Testimonials = () => {
                   <div className='text-center'>
                     <FaRegCommentDots className='text-4xl text-blue-500' />
                   </div>
-                  <div className='text-left space-y-1'>
-                    <h3 className='font-semibold text-2xl text-gray-800'>
-                      {review.name}
-                    </h3>
-                    <p className='text-gray-500'>{review.location}</p>
-                  </div>
-                  <p className='text-lg text-center w-full text-gray-700 '>
+
+                  <h3 className='font-semibold text-2xl text-gray-800'>
+                    {review.name}
+                  </h3>
+
+                  <p className='text-lg md:text-xl text-center w-full text-gray-700 '>
                     {review.message}
                   </p>
                 </div>

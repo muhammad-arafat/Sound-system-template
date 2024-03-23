@@ -3,7 +3,21 @@ import { useState } from "react";
 import new_box from "../assets/images/new.png";
 import modern from "../assets/images/modern.png";
 import box from "../assets/images/product-box.png";
+import { motion } from "framer-motion";
 
+const imageVariants = {
+  hidden: {
+    scale: 0.9,
+    opacity: 1,
+  },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+    },
+  },
+};
 const productsData = [
   {
     image: box,
@@ -30,21 +44,16 @@ const Product = ({ image, title, subtitle, buttonText }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div
+    <motion.div
+      variants={imageVariants}
+      initial='hidden'
+      animate={isHovered ? "visible" : "hidden"}
       className='flex flex-col md:flex-row items-center justify-between p-4 md:p-8 font-poppins'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className='flex-1 relative overflow-hidden'>
-        <img
-          src={image}
-          alt='Banner Image'
-          className={`rounded-3xl  ${
-            isHovered
-              ? "scale-105 transition-transform duration-500 ease-in-out"
-              : "scale-100"
-          }`}
-        />
+        <img src={image} alt='Banner Image' className='rounded-3xl' />
         {isHovered && (
           <div className='absolute inset-0 flex flex-col items-center text-start justify-center px-3 bg-black bg-opacity-75 transition-opacity duration-500 ease-in-out'>
             <h2 className='text-2xl font-bold text-white mb-2'>{title}</h2>
@@ -55,7 +64,7 @@ const Product = ({ image, title, subtitle, buttonText }) => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

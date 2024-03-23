@@ -6,18 +6,30 @@ import {
   FaPinterestSquare,
 } from "react-icons/fa";
 import { FaSquareTwitter, FaInstagram } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
 const Footer = () => {
   return (
-    <div className=' max-w-7xl mx-auto px-5 py-20'>
+    <div className=' max-w-7xl mx-auto px-5 pt-20'>
       <Divider />
       <div className=' flex flex-col md:flex-row space-y-5 justify-between items-center'>
-        <div className=' flex items-center justify-center md:justify-start space-x-2 w-full'>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className=' flex items-center justify-center md:justify-start space-x-2 w-full'
+        >
           <img src={logo} alt='' className=' w-20' />
           <p className=' font-bold text-xl uppercase text-blue-600 tracking-wider'>
             Instrumental
           </p>
-        </div>
-        <div className=' flex  gap-x-5'>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className=' flex  gap-x-5'
+        >
           <a
             href='/hiremaster/google'
             className=' hover:text-blue-400 text-blue-600'
@@ -48,11 +60,16 @@ const Footer = () => {
           >
             <FaSquareTwitter className=' text-3xl' />
           </a>
-        </div>
+        </motion.div>
       </div>
-      <p className=' text-center font-medium text-gray-500 py-5'>
+      <motion.p
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className=' text-center font-medium text-gray-500 py-5'
+      >
         Copyright &copy; 2024 - All right reserved.
-      </p>
+      </motion.p>
       <Divider />
     </div>
   );
